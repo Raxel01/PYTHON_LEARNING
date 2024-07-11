@@ -53,3 +53,95 @@ Path = '/Users/abait-ta/Desktop/PYTHON_LEARNING/File'
 #         print(file.read())
 # except Exception as e:
 #     hello(e)
+
+# here I start The OOP :
+
+# name should be capital OK: (best practice)
+# 0:Model
+# There is instance variable 
+
+# class Car:
+#     type = 'Cars' #class variable
+#     def __init__(self, *args):
+#         self.Model  =  args[0] #instance variable
+#         self.Year   =  args[1]
+#         self.color  =  args[2]
+#         self.Horses =  args[3]
+#     def CarPresentation(self):
+#         print('Hello my name is {:^10}{:^10} {:^10} {:^10}'.format(self.Model, self.Year, self.color, self.Horses))
+
+# CarMazda = Car('MAZDA2', 2024, 'red', 1000)
+# Mercedes = Car('mercedes->206', 2010, 'green', 50)
+
+# Car.type = 'ola'
+# print(CarMazda.type)
+# print('*******')
+# print(Mercedes.type)
+
+# CarMazda.CarPresentation()
+# Mercedes.CarPresentation()
+
+class Animal :
+    alive= True
+    def eat (self):
+        print('This Animal is eating')
+    def sleep (self):
+        print('This Animal is sleeping')
+    def Sound(self):
+        print('This animal is general don\'t have a Sound')
+    
+class Rabbit(Animal):
+     def eat (self):
+        print('This Animal is eating yes I eat I\'m a rabbit')
+
+class Fish(Animal):
+    pass
+class Hawk(Animal):
+    pass
+
+# rabbit = Rabbit()
+# fish = Fish()
+# hawk = Hawk()
+
+
+# rabbit.eat()
+# fish.Sound()
+# hawk.Sound()
+
+class rectangl:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+class square(rectangl):
+    def __init__(self, length, width):
+        super.__init__(length, width)
+        
+
+class Cube (rectangl):
+    def __init__(self, length, width, height):
+        self.height = height
+        super.__init__(length, width)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
