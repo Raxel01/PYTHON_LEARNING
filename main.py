@@ -103,7 +103,6 @@ class Hawk(Animal):
 # fish = Fish()
 # hawk = Hawk()
 
-
 # rabbit.eat()
 # fish.Sound()
 # hawk.Sound()
@@ -115,17 +114,29 @@ class rectangl:
 
 class square(rectangl):
     def __init__(self, length, width):
-        super.__init__(length, width)
+        super().__init__(length, width)
+    def _area_(self):
+        return self.length * self.width
         
 
 class Cube (rectangl):
     def __init__(self, length, width, height):
+        super().__init__(length, width)
         self.height = height
-        super.__init__(length, width)
+    def __volume__(self):
+        return self.height * self.width * self.length
 
 
+# Summary : 
+# So on python we have the oop olso so that Mean this language use object , when we talk a bout a classs we can Define as 
+# user defined data TYPE
+#object is an instance of this class so the object will ontian all attributes 
+mysquare = square(9, 3)
+cube = Cube(1, 2 ,8)
 
+print(mysquare._area_());
 
+print(cube.__volume__());
 
 
 
