@@ -1,5 +1,7 @@
 import random
 from auxiliere import *
+from abc import ABC, abstractmethod
+
 
 movies = ['WAR', "Demolition", "Memory", "Inception"]
 
@@ -107,52 +109,84 @@ class Hawk(Animal):
 # fish.Sound()
 # hawk.Sound()
 
-class rectangl:
-    def __init__(self, length, width):
-        self.length = length
-        self.width = width
+# class rectangl:
+#     def __init__(self, length, width):
+#         self.length = length
+#         self.width = width
 
-class square(rectangl):
-    def __init__(self, length, width):
-        super().__init__(length, width)
-    def _area_(self):
-        return self.length * self.width
+# class square(rectangl):
+#     def __init__(self, length, width):
+#         super().__init__(length, width)
+#     def _area_(self):
+#         return self.length * self.width
         
 
-class Cube (rectangl):
-    def __init__(self, length, width, height):
-        super().__init__(length, width)
-        self.height = height
-    def __volume__(self):
-        return self.height * self.width * self.length
+# class Cube (rectangl):
+#     def __init__(self, length, width, height):
+#         super().__init__(length, width)
+#         self.height = height
+#     def __volume__(self):
+#         return self.height * self.width * self.length
 
 
-# Summary : 
-# So on python we have the oop olso so that Mean this language use object , when we talk a bout a classs we can Define as 
-# user defined data TYPE
-#object is an instance of this class so the object will ontian all attributes 
-mysquare = square(9, 3)
-cube = Cube(1, 2 ,8)
+# # Summary : 
+# # So on python we have the oop olso so that Mean this language use object , when we talk a bout a classs we can Define as 
+# # user defined data TYPE
+# #object is an instance of this class so the object will ontian all attributes 
+# mysquare = square(9, 3)
+# cube = Cube(1, 2 ,8)
 
-print(mysquare._area_());
+# print(mysquare._area_());
 
-print(cube.__volume__());
+# print(cube.__volume__());
+
+class vehicul(ABC):
+    @abstractmethod
+    def _max_speed_(self, distance, temps):
+        pass
+
+class Car(vehicul):
+    def __init__(self, distance, temps):
+        self.Distance = distance
+        self.Temps = temps
+
+    def _max_speed_(self):
+        print(int(self.Distance / self.Temps))
+
+# myVeh = Car(150, 50);
+# myVeh._max_speed_()
+
+class Pontalon:
+    color = None
+    def _print_color(self):
+        print(self.color)
+
+def _set_color_(pntobj , color):
+    pntobj.color = color
 
 
+pnt = Pontalon()
 
+pnt._print_color();
 
+_set_color_(pnt, 'Yellow')
 
+pnt._print_color();
 
+print(name := 'Hello mother Fucker')
+# Assign a variable to a function
+say = print
 
+say('What The Fuck')
 
+#Higher Order Fucntion : accept a function as an argument
+#return a function
 
+def UpperIt(name):
+    name = name.lower();
+    print(name)
 
+def _give_name_(funct, Name):
+    funct(Name)
 
-
-
-
-
-
-
-
-
+_give_name_(UpperIt, 'AbdelalI')
