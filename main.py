@@ -167,17 +167,17 @@ def _set_color_(pntobj , color):
 
 pnt = Pontalon()
 
-pnt._print_color();
+# pnt._print_color();
 
 _set_color_(pnt, 'Yellow')
 
-pnt._print_color();
+# pnt._print_color();
 
-print(name := 'Hello mother Fucker')
+# print(name := 'Hello mother Fucker')
 # Assign a variable to a function
-say = print
+# say = print
 
-say('What The Fuck')
+# say('What The Fuck')
 
 #Higher Order Fucntion : accept a function as an argument
 #return a function
@@ -189,4 +189,64 @@ def UpperIt(name):
 def _give_name_(funct, Name):
     funct(Name)
 
-_give_name_(UpperIt, 'AbdelalI')
+# _give_name_(UpperIt, 'AbdelalI')
+
+def funct1(n1):
+    def func2(n2):
+        return n1 / n2
+    return func2
+# essai1 = funct1(10)
+# print(essai1(5))
+
+
+#lambda fUNCRION ARE A FUNCTION writen on one line beginning by lambda keyword 
+# they accept more thatn one param and have only on expression
+
+# year = 2024
+agecalc = lambda year: 2024 - year
+
+# print(agecalc(1996))
+#Sorted Return a list of sorted iterable on python 
+# sort() sort in place for lists
+# for iterables you can Use sorted()
+
+# sort a list
+Abreviation = (
+               {'MAR' : 'Maroc'},
+               {'GAB' : '9elawa'},
+               {'USA' : 'United State of America'}
+            )
+
+store = [
+        ('foul' , 10),
+        ('oil'  , 10),
+        ('Tango', 10)
+]
+
+effector = lambda data: print("{} : {}".format(data[0], data[1] * 5))
+
+NewStore =list(map(effector, store))
+
+
+# print(NewStore)
+# Define a custom function to extract the key from each dictionary in the tuple
+# get_key = lambda tuple: tuple[0].items()
+
+# print(get_key(Abreviation))
+# Sort the tuple using sorted and the custom key function
+# sorted_tuple = sorted(Abreviation, key=get_key)
+
+# print(sorted_abbr)
+# status = lambda Abreviation: Abreviation[0]
+
+# print(status(Abreviation))
+
+# for dictelem in Abreviation:
+#     for key, value in dictelem.items():
+#         print(key, value)
+
+# value = lambda values: values.keys()
+
+# mySortedList = sorted(Abreviation, key=value);
+
+# print(mySortedList)
