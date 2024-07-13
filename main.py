@@ -218,16 +218,16 @@ Abreviation = (
             )
 
 store = [
-        ('foul' , 10),
-        ('oil'  , 10),
-        ('Tango', 10)
+        ('foul' , 20),
+        ('oil'  , 5),
+        ('Tango', 90)
 ]
 
-effector = lambda data: print("{} : {}".format(data[0], data[1] * 5))
+effector = lambda data:data[1] >= 18
 
-NewStore =list(map(effector, store))
+NewStore =list(filter(effector, store))
 
-
+# print(NewStore)
 # print(NewStore)
 # Define a custom function to extract the key from each dictionary in the tuple
 # get_key = lambda tuple: tuple[0].items()
@@ -250,3 +250,57 @@ NewStore =list(map(effector, store))
 # mySortedList = sorted(Abreviation, key=value);
 
 # print(mySortedList)
+
+# new
+
+marks = [100, 50, 40, 33, 16, 48]
+
+accepted = [i for i in marks if i >=50]
+# result = [float(i / 2) for i in range(4, 10)]
+# print(accepted)
+
+weather = {
+    'New York': 'sunny',
+    'Boston' : 'snny',
+    'Los Angles' : 'bunny',
+    'Chicago' : 'sunny',
+    }
+
+weather_filter = {key: value for (key, value) in weather.items() if value == 'sunny'}
+# {key: (expression) fro (key, value) in iterable if condition}
+# print(weather_filter)
+
+username =  ['user1', 'user2', 'user3']
+passwords = ['@@@212', '#$%20']
+
+usersData = list(zip(username, passwords))
+
+# [print(i) for i in usersData]
+
+# {key: print('pass : ' + value) for (key, value) in usersData.items()}
+# import time
+# print(time.ctime(2))
+
+# import threading
+
+# amount = 150
+
+# def first_run():
+#     print('first increme')
+
+# def sec_run():
+#     print('sec increme')
+
+# print('Hola')
+
+# x = threading.Thread(target=first_run, args=())
+# x.start()
+
+# y = threading.Thread(target=sec_run, args=())
+# y.start()
+
+# print(amount)
+
+# print(threading.active_count())
+
+# print(threading.enumerate())
