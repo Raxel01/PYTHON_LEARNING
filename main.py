@@ -304,3 +304,16 @@ usersData = list(zip(username, passwords))
 # print(threading.active_count())
 
 # print(threading.enumerate())
+
+import smtplib 
+sender = 'aittalbabdelalie@gmail.com'
+receiver = 'hamzayounsi006@gmail.com'
+subject = 'python email test'
+body = 'python email test by Me '
+
+message = f"""From: {sender}
+To: {receiver}
+Subject = {subject}\n
+{body}
+
+"""
